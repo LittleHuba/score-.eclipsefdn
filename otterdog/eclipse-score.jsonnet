@@ -797,9 +797,9 @@ orgs.newOrg('automotive.score', 'eclipse-score') {
           include_refs+: [
             "refs/tags/*",
           ],
-          allows_creations = false,
-          allows_deletions = false,
-          allows_updates = false,
+          allows_creations: false,
+          allows_deletions: false,
+          allows_updates: false,
         },
       ],
       environments: [
