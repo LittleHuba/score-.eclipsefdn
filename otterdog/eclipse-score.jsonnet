@@ -953,6 +953,13 @@ orgs.newOrg('automotive.score', 'eclipse-score') {
             "@eclipse-score/codeowner-lola:pull_request",
           ],
           allows_force_pushes: false,
+          required_status_checks+: {
+            status_checks+: [
+              "Build & Test (Host) / Build & Test",
+              "Linter Checks / copyright",
+              "Linter Checks / ruff",
+            ],
+          },
           required_merge_queue: orgs.newMergeQueue() {
             merge_method: "MERGE",
             status_check_timeout: 120,
